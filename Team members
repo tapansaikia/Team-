@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="team1.css">
+    <title>Our Team</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+}
+
+.team {
+    background: #181818;
+}
+
+.team-header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/*.container {
+    position: relative;
+}
+*/
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.card .front {
+    /*position: absolute;*/
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transition: 0.5s;
+}
+
+
+.card:hover .front {
+    transform: rotateX(-180deg);
+}
+
+.card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    transition: 0.5s;
+    background: #000;
+}
+
+.card:hover .back {
+    transform: rotateX(0deg);
+}
+
+.card .back .details {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card .back .detalis h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.card .back .detalis h2 span {
+    color: #a7a7a7;
+    font-size: 16px;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+</style>
+<body>
+
+    <div class="team">
+        
+<!-- Header -->
+<div class="team-header">
+  <h1>Meet Our Team</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+        <div class="card">
+        <div class="front">
+            <img src="profile.jpg" style="width:100%">   
+        </div>
+        <div class="back">
+            <div class="details">
+                <h2>Tapan Saikia</h2><br><span>Web Devloper</span>
+            </div>
+        </div>
+    </div>
+
+        <div class="card">
+        <div class="front">
+            <img src="akash.jpg" style="width:100%">   
+        </div>
+        <div class="back">
+            <div class="details">
+                <h2>Akashjyoti Hazarika</h2><br><span>Web Designer</span>
+            </div>
+        </div>
+    </div>
+  </div>
+    
+  <div class="column">
+    <div class="card">
+        <div class="front">
+            <img src="fatso.jpg" style="width:100%">   
+        </div>
+        <div class="back">
+            <div class="details">
+                <h2>Tukan Dutta</h2><br><span>Web Devloper</span>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <img src="sourav.jpg" style="width:100%">   
+        </div>
+        <div class="back">
+            <div class="details">
+                <h2>Sourav Das</h2><br><span>Team Head</span>
+            </div>
+        </div>
+    </div>
+  </div>  
+  <div class="column">
+    <div class="card">
+        <div class="front">
+            <img src="manish.jpg" style="width:100%">   
+        </div>
+        <div class="back">
+            <div class="details">
+                <h2>Manish Upadhya</h2><br><span>Web Devloper</span>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <img src="priyam.jpg" style="width:100%">   
+        </div>
+        <div class="back">
+            <div class="details">
+                <h2>Priyam Bharadwaz</h2><br><span>Web Designer</span>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+        <div class="front">
+            <img src="rohit.jpg" style="width:100%">   
+        </div>
+        <div class="back">
+            <div class="details">
+                <h2>Rohit Upadhaya</h2><br><span>Team Head</span>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+</body>
+</html>
